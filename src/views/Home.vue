@@ -16,3 +16,26 @@ import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
 })
 export default class Home extends Vue {}
 </script>
+
+
+<!--<template>-->
+    <!--<div class="container">-->
+        <!--<div class="row" id="first">-->
+            <!--<div class="form-group">-->
+                <!--<div class="input-group">-->
+                    <!--<input type="text" class="form-control" id="msg">-->
+                    <!--<span class="input-group-btn">-->
+            <!--<button class="btn btn-primary" type="button" id="send">Send-->
+            <!--</button>-->
+          <!--</span>-->
+                <!--</div>-->
+                <!--<p class="help-block">Example: "Hello", "4 Hello"</p>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</template>-->
+
+<!--<script>-->
+    <!--import '../grpc-web/client'-->
+    <!--export default class Home extends Vue{}-->
+<!--</script>-->
