@@ -31,4 +31,4 @@ class EchoApp {
     }
 }
 let echoService = new  EchoServiceClient('http://123.207.242.177:8080', null, null);
-export  const server = new EchoApp(echoService);
+export const server = new EchoApp(echoService);
