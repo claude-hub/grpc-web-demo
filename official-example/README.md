@@ -8,7 +8,7 @@
     vim /etc/envoy/envoy.yaml
     ```
     修改最后一行，把监听地址改为宿主机，ifconfig查看
-    ```
+```
 admin:
   access_log_path: /tmp/admin_access.log
   address:
@@ -54,6 +54,6 @@ static_resources:
     http2_protocol_options: {}
     lb_policy: round_robin
     hosts: [{ socket_address: { address: 172.17.0.1, port_value: 9090 }}]
-    ```
+```
 2. 运行node
 3. 直接打开echotest.html
