@@ -1,8 +1,11 @@
 ## 这是运行的https://github.com/grpc/grpc-web,官方例子
 
 1. 准备envoy代理
+
     docker run -d -p 8080:8080 envoy
+
     修改容器配置
+
     ```
     docker exec -it 容器id bash
     vim /etc/envoy/envoy.yaml
@@ -56,4 +59,5 @@ static_resources:
     hosts: [{ socket_address: { address: 172.17.0.1, port_value: 9090 }}]
 ```
 2. 运行node
+
 3. 直接打开echotest.html
