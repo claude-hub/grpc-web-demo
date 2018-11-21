@@ -1,8 +1,8 @@
 import grpcWeb from 'grpc-web';
 // @ts-ignore
-import {EchoServiceClient} from './echo_grpc_web_pb';
+import {EchoServiceClient} from '../protos/echo_grpc_web_pb';
 // @ts-ignore
-import {EchoRequest, EchoResponse} from './echo_pb';
+import {EchoRequest, EchoResponse} from '../protos/echo_pb';
 
 
 class EchoApp {

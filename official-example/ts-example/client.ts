@@ -26,6 +26,7 @@ import {EchoServiceClient} from './echo_grpc_web_pb';
 // Option 2: import_style=typescript
 // import {EchoServiceClient} from './EchoServiceClientPb';
 
+// @ts-ignore
 import {EchoRequest, EchoResponse, ServerStreamingEchoRequest, ServerStreamingEchoResponse} from './echo_pb';
 
 class EchoApp {
