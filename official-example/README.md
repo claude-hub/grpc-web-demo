@@ -9,7 +9,7 @@
     ```
     修改最后一行，把监听地址改为宿主机，ifconfig查看
     ```
-    admin:
+admin:
   access_log_path: /tmp/admin_access.log
   address:
     socket_address: { address: 0.0.0.0, port_value: 9901 }
