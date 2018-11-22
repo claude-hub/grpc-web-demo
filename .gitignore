@@ -1,3 +1,6 @@
 .idea
 .vscode
 
+将删除 Gopkg.lock
+将删除 Gopkg.toml
+将删除 protos/
