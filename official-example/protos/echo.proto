@@ -101,3 +101,17 @@ service EchoService {
   // This is how an image recognition API may work.
   rpc HalfDuplexEcho(stream EchoRequest) returns (stream EchoResponse);
 }
+
+//vue-js生成
+//protoc -I=. echo.proto
+//--js_out=import_style=commonjs:../vue-example/src/protos
+//--grpc-web_out=import_style=commonjs,mode=grpcwebtext:../vue-example/src/protos
+
+//ts-example-js
+//protoc -I=. echo.proto
+//--js_out=import_style=commonjs:../ts-example
+//--grpc-web_out=import_style=commonjs,mode=grpcwebtext:../ts-example
+
+//go生成
+//protoc -I=. echo.proto
+//--go_out=plugins=grpc:../go-server/protos

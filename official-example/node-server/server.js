@@ -16,7 +16,7 @@
  *
  */
 
-var PROTO_PATH = __dirname + '/../echo.proto';
+var PROTO_PATH = __dirname + '/../protos/echo.proto';
 
 var async = require('async');
 var _ = require('lodash');

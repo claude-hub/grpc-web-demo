@@ -1,5 +1,5 @@
 {
-  "name": "frontend-vue",
+  "name": "vue-example",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -37,7 +37,7 @@
       "node": true
     },
     "extends": [
-      "plugin:vue/essential",
+      "plugin:vue/strongly-recommended",
       "@vue/prettier",
       "@vue/typescript"
     ],

@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	pb "github.com/zypcloudy/grpc-web-demo/backend-go/protos"
+	pb "github.com/zypcloudy/grpc-web-demo/official-example/go-server/protos"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
