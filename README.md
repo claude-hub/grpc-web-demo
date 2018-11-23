@@ -53,3 +53,36 @@ static_resources:
     lb_policy: round_robin
     hosts: [{ socket_address: { address: 172.17.0.1, port_value: 9090 }}]
 ```
+
+### Postgresql安装
+
+`docker run --name postgres01 -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d --restart=always postgres`
+
+```
+CREATE USER root WITH PASSWORD 'root';
+
+ALTER ROLE root LOGIN;
+
+CREATE DATABASE cashbox OWNER postgres;
+
+GRANT ALL PRIVILEGES ON DATABASE cashbox TO root;
+```
+### proto生成代码
+
+在protos目录下执行
+
+```
+//vue-js生成
+protoc -I=. echo.proto \
+--js_out=import_style=commonjs:../vue-example/src/protos \
+--grpc-web_out=import_style=commonjs,mode=grpcwebtext:../vue-example/src/protos
+
+//ts-example-js
+protoc -I=. echo.proto \
+--js_out=import_style=commonjs:../ts-example \
+--grpc-web_out=import_style=commonjs,mode=grpcwebtext:../ts-example
+
+//go生成
+protoc -I=. echo.proto \
+--go_out=plugins=grpc:../go-server/protos
+```
