@@ -54,19 +54,6 @@ static_resources:
     hosts: [{ socket_address: { address: 172.17.0.1, port_value: 9090 }}]
 ```
 
-### Postgresql安装
-
-`docker run --name postgres01 -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d --restart=always postgres`
-
-```
-CREATE USER root WITH PASSWORD 'root';
-
-ALTER ROLE root LOGIN;
-
-CREATE DATABASE cashbox OWNER postgres;
-
-GRANT ALL PRIVILEGES ON DATABASE cashbox TO root;
-```
 ### proto生成代码
 
 在protos目录下执行
