@@ -1,8 +1,13 @@
+### 官方demo地址
+
+https://github.com/grpc/grpc-web/tree/master/net/grpc/gateway/examples/echo
+
 ### 准备envoy代理
 
 ```
 docker pull envoyproxy/envoy
 docker run -d -p 8080:8080 -v /home/carl/config/envoy/envoy.yaml:/etc/envoy/envoy.yaml --restart=always  envoyproxy/envoy
+docker run -d -p 8080:8080 -v E:/docker/envoy/envoy.yaml:/etc/envoy/envoy.yaml  envoyproxy/envoy
 ```
 
 envoy.yaml 配置如下,最后一行的监听是宿主机的ip,通过ifconfig,找到docker0的ip
@@ -53,6 +58,8 @@ static_resources:
     lb_policy: round_robin
     hosts: [{ socket_address: { address: 172.17.0.1, port_value: 9090 }}]
 ```
+
+> hosts: [{ socket_address: { address: 10.0.75.1, port_value: 9090 }}]
 
 ### proto生成代码
 
