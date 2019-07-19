@@ -1,7 +1,7 @@
 const { HelloRequest,RepeatHelloRequest } = require('./helloworld_pb.js');
 const { GreeterClient } = require('./helloworld_grpc_web_pb.js');
 
-var client = new GreeterClient('http://' + window.location.hostname + ':8880',
+var client = new GreeterClient('http://localhost:8880',
   null, null);
 
 // simple unary call
